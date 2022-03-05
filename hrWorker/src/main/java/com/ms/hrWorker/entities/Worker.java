@@ -15,14 +15,13 @@ public class Worker implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;	
-	private String nome;
+	private String name;
 	private Double dailyIncome;
-		
-		public Worker(Long id, String nome, Double dailyIncome) {
-			this.id = id;
-			this.nome = nome;
-			this.dailyIncome = dailyIncome;
-		}
+
+		public Worker(String name, Double dailyIncome) {
+		this.name = name;
+		this.dailyIncome = dailyIncome;
+	}
 
 
 		public Worker() {
@@ -39,14 +38,18 @@ public class Worker implements Serializable {
 		}
 
 
-		public String getNome() {
-			return nome;
+		
+
+
+		public String getName() {
+			return name;
 		}
 
 
-		public void setNome(String nome) {
-			this.nome = nome;
+		public void setName(String name) {
+			this.name = name;
 		}
+
 
 
 		public Double getDailyIncome() {
