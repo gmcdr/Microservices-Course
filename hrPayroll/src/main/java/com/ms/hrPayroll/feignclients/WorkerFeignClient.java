@@ -11,7 +11,7 @@ import com.ms.hrPayroll.entities.Worker;
 
 
 @Component
-@FeignClient(name = "hrWorker", url = "localhost:8001", path="/workers")
+@FeignClient(name = "hrWorker", path="/workers")
 public interface WorkerFeignClient {
 	
 	@GetMapping(value = "/{id}")
